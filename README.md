@@ -7,7 +7,7 @@ Kernel        | 1.0                | 1.0            | Yes, see changelog
 Userland      | 1.0                | 1.0            | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.2                | 1.2            | None
-Border Router | ?                  | ?              | None
+Border Router | 1.0                | 1.0            | None
 
 # Expected Flash Attributes
 
