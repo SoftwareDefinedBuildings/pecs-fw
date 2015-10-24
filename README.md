@@ -13,8 +13,8 @@ Border Router | 1.0                | 1.0            | None
 
 Index | Key         | Value                             | Value Example
 ------|-------------|-----------------------------------|--------------
-0     | serial      | serial number for the mote        | f00d
-2     | meshpfx     | IPv6 prefix for this mote         | 2001:470:1234:2::
+0     | serial      | serial number for the mote        | `f00d`
+2     | meshpfx     | IPv6 prefix for this mote         | `2001:470:1234:2::`
 
 ## Serial Number Attribute
 
@@ -53,12 +53,12 @@ We augment the above table to include what the border router expects
 
 Index | Key         | Value                             | Value Example
 ------|-------------|-----------------------------------|--------------
-0     | serial      | serial number for the mote        | f00d
-2     | meshpfx     | IPv6 prefix for this mote         | 2001:470:1234:2::
-3     | remtun      | IPv4 address of the remote tunnel | 10.4.10.3
-4     | loctun      | IPv4 address of the border router | 10.4.10.2
-5     | locmask     | Netmask for the border router IPv4 network | 255.255.255.0
-6     | locgate     | Gateway for border router IPv4 network    | 10.4.10.1
+0     | serial      | serial number for the mote        | `f00d`
+2     | meshpfx     | IPv6 prefix for this mote         | `2001:470:1234:2::`
+3     | remtun      | IPv4 address of the remote tunnel | `10.4.10.3`
+4     | loctun      | IPv4 address of the border router | `10.4.10.2`
+5     | locmask     | Netmask for the border router IPv4 network | `255.255.255.0`
+6     | locgate     | Gateway for border router IPv4 network    | `10.4.10.1`
 
 These can be set with the `sload borderconfig` command. See [stormloader](https://github.com/SoftwareDefinedBuildings/stormloader)
 which can be installed with `pip install stormloader`.
