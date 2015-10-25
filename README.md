@@ -15,6 +15,7 @@ Index | Key         | Value                             | Value Example
 ------|-------------|-----------------------------------|--------------
 0     | serial      | serial number for the mote        | `f00d`
 2     | meshpfx     | IPv6 prefix for this mote         | `2001:470:1234:2::`
+7     | border      | Node ID for the one-hop border router | `400e`
 
 ## Serial Number Attribute
 
@@ -44,6 +45,22 @@ which you can set via
 ```
 $ sload sattr 2 meshpfx 2001:470:4112:2::
 ```
+
+If you are a mote and want to have a statically configured border router, you can set the border
+router address via an attribute. This is assuming you have been compiled with `RPL_SINGLE_HOP`,
+which is most likely the case if you are a non-border router.
+
+```
+$ sload sattr 7 border 400d # this is the nodeID of the router
+```
+
+These can be accomplished in a single step with the `sload moteconfig` command:
+
+```
+$ sload moteconfig 2001:470:4112:2:: 400d
+```
+
+which sets the prefix and the border router one-hop address (`fe80::212:6d02:0:400d` in this case).
 
 Make sure to run `sload tail` after changing any attributes.
 
