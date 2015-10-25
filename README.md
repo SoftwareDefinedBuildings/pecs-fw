@@ -7,7 +7,7 @@ Kernel        | 1.0                | 1.0            | Yes, see changelog
 Userland      | 1.0                | 1.0            | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.2                | 1.2            | None
-Border Router | 1.0                | 1.0            | None
+Border Router | 1.1                | 1.1            | None
 
 # Expected Flash Attributes
 
@@ -68,7 +68,7 @@ which can be installed with `pip install stormloader`.
 
 #### Kernel 1.0
  - Incorporated timer overflow patch
- 
+
 Known issues:
 
  - No watchdog
@@ -83,7 +83,7 @@ Known issues:
  - Does not kick a watchdog
  - Will crash if peripheral boards are plugged in while the system is powered on. This issue we hope to solve with the watchdog additions
  - Does not set the UI status LED based on battery
- 
+
 #### Haptic UI 1.2
  - First production version
  - All functionality implemented
@@ -92,3 +92,11 @@ Known issues:
 Known issues:
 
  - Processor does not utilize XLP modes. This is likely a wontfix because the LEDs far outweigh any benefits from XLP.
+
+
+#### Border Router 1.1
+ - Fixed forwarding table issue.
+ - Can now set all configurations for border router through attributes
+
+Known issues:
+ - No watchdog
