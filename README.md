@@ -3,8 +3,8 @@ A collection of the production firmware images for the PECS ensemble
 
 Component     | Production Version | Latest Version | Known Issues
 --------------|--------------------|----------------|-------------------
-Kernel        | 1.0                | 1.0            | Yes, see changelog
-Userland      | 1.0                | 1.0            | Yes, see changelog
+Kernel        | 4.0.4              | 4.0.4          | None
+Userland      | v0                 | v0             | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.2                | 1.2            | None
 Border Router | 1.1                | 1.1            | None
@@ -83,22 +83,19 @@ which can be installed with `pip install stormloader`.
 
 # Changelog
 
-#### Kernel 1.0
+#### Kernel 4.0.4
  - Incorporated timer overflow patch
+ - Added watchdog
+ - Added flash attributes
 
-Known issues:
-
- - No watchdog
- - Only works on BR 2001:470:83ae:2:212:6d02:0:400d
-
-#### Userland 1.0
+#### Userland v0
  - Initial version
+ - Added persisted settings on restart
+ - Added watchdog kicking
 
 Known issues:
 
- - Does not persist settings on restart
- - Does not kick a watchdog
- - Will crash if peripheral boards are plugged in while the system is powered on. This issue we hope to solve with the watchdog additions
+ - Will crash if peripheral boards are plugged in while the system is powered on.
  - Does not set the UI status LED based on battery
 
 #### Haptic UI 1.2
