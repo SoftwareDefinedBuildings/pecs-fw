@@ -111,6 +111,7 @@ Known issues:
 #### Border Router 1.2
  - Updated to Kernel 4.0.4
  - Added dbg version with quiet flags turned off (output over UART)
+ - Fixed floating SDCard SPI chip select line that SOMEHOW worked for over a year
 
 Known issues:
  - No watchdog
