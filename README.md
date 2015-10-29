@@ -111,8 +111,8 @@ Known issues:
  - Processor does not utilize XLP modes. This is likely a wontfix because the LEDs far outweigh any benefits from XLP.
 
 
-#### Border Router 1.3
- - Updated to Kernel 4.0.5
+#### Border Router 1.4
+ - Updated to Kernel 4.0.6
  - Fixed UDP checksum
 
 Known issues:
