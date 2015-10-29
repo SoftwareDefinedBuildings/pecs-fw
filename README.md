@@ -108,9 +108,10 @@ Known issues:
  - Processor does not utilize XLP modes. This is likely a wontfix because the LEDs far outweigh any benefits from XLP.
 
 
-#### Border Router 1.1
- - Fixed forwarding table issue.
- - Can now set all configurations for border router through attributes
+#### Border Router 1.2
+ - Updated to Kernel 4.0.4
+ - Added dbg version with quiet flags turned off (output over UART)
+ - Fixed floating SDCard SPI chip select line that SOMEHOW worked for over a year
 
 Known issues:
  - No watchdog
