@@ -3,7 +3,7 @@ A collection of the production firmware images for the PECS ensemble
 
 Component     | Production Version | Latest Version | Known Issues
 --------------|--------------------|----------------|-------------------
-Kernel        | 4.0.4              | 4.0.4          | None
+Kernel        | 4.0.6              | 4.0.6          | None
 Userland      | v0                 | v0             | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.2                | 1.2            | None
@@ -83,6 +83,9 @@ which can be installed with `pip install stormloader`.
 
 # Changelog
 
+#### Kernel 4.0.6
+ - Fixed steve's incorrect IP packet checksum algorithm
+ 
 #### Kernel 4.0.4
  - Incorporated timer overflow patch
  - Added watchdog
