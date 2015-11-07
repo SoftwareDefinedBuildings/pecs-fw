@@ -4,7 +4,7 @@ A collection of the production firmware images for the PECS ensemble
 Component     | Production Version | Latest Version | Known Issues
 --------------|--------------------|----------------|-------------------
 Kernel        | 4.0.6              | 4.0.6          | None
-Userland      | v2                 | v2             | Yes, see changelog
+Userland      | v3                 | v3             | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.2                | 1.2            | None
 Border Router | 1.1                | 1.1            | None
@@ -82,6 +82,11 @@ which can be installed with `pip install stormloader`.
 
 
 # Changelog
+
+#### Userland v3
+ - Fix for log when packets are duplicated and arrive at EXACTLY the wrong time
+ - Remove overly noisy settings print
+ - Add version number print on startup
 
 #### Userland v2
  - Fix log pointer race
