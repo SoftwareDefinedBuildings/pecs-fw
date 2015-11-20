@@ -8,6 +8,7 @@ Userland      | v4                 | v4             | Yes, see changelog
 BLE           | -                  | -              | Nonexistence
 Haptic UI     | 1.3                | 1.3            | None
 Border Router | 1.4                | 1.4            | Yes, no watchdog
+Stormloader   | 1.7.0              | 1.7.0          | None
 
 # Expected Flash Attributes
 
