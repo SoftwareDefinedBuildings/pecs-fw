@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -ex
+cd -- "$(dirname "$BASH_SOURCE")"
+git pull origin master
+sload flash kernel/latest
+sload program userland/latest
+sload burnfuses --wdt --bor

@@ -10,6 +10,21 @@ Haptic UI     | 1.3                | 1.3            | None
 Border Router | 1.4                | 1.4            | Yes, no watchdog
 Stormloader   | 1.7.0              | 1.7.0          | None
 
+## Getting Started
+
+From your Terminal application/emulator:
+
+```
+git clone https://github.com/SoftwareDefinedBuildings/pecs-fw
+cd pecs-fw
+pwd
+# this will print out what directory the repository is in.
+# Make a note of this
+```
+
+To flash a chair, find the directory `pecs-fw` that you created
+above and double clck the `update_chair_osx` script.
+
 # Expected Flash Attributes
 
 Index | Key         | Value                             | Value Example
@@ -92,7 +107,7 @@ which can be installed with `pip install stormloader`.
  - Add battery level checking
  - Report battery ok status
  - Requires kernel 4.0.7 and haptic UI 1.3. Best if used with burnfuses --bor --wdt
-  
+
 #### Kernel 4.0.7
  - Integrate new timer code
  - Fix watchdog so that it still reconfigures if burnfuses --wdt is used
@@ -108,7 +123,7 @@ which can be installed with `pip install stormloader`.
 
 #### Kernel 4.0.6
  - Fixed steve's incorrect IP packet checksum algorithm
- 
+
 #### Kernel 4.0.4
  - Incorporated timer overflow patch
  - Added watchdog
