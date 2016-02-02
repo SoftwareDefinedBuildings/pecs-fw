@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -e
+cd -- "$(dirname "$BASH_SOURCE")"
+
+# prompt to set the node id
+HAS_SERIAL=`sload gattr | grep "serial =>" | wc -l`
+if [ $HAS_SERIAL -eq 0 ] ; then
+    nodeid=""
+    while [ "$nodeid" = "" ] ; do
+        echo -n "Enter the 4-digit NODE ID for this board (should be printed on the back) and press [ENTER]: "
+        read nodeid
+    done
+    sload sattr -x 0 serial $nodeid
+    if [ $? -eq 0 ] ; then
+        echo "Successfully set the node id!"
+    fi
+else
+    echo "NODE ID already set"
+fi
+
+# call moteconfig
+
+echo "Configure node for a deployment. Choose one of "
+echo "---"
+index=0
+while read LINE ; do
+    (( index += 1 ))
+    echo $index")" $(echo $LINE | cut -f1 -d" ")
+done < "./deployments"
+
+echo "---"
+echo "and press [Enter]"
+loc_length=`wc -l ./deployments | cut -f1 -d" "`
+choose=0
+while true ; do
+    echo -n "> "
+    read choose
+    case $choose in [1-$loc_length]) break ;; esac
+    echo "MUST BE IN RANGE 1-"$loc_length
+done
+
+read name prefix root <<< $(sed "${choose}q;d" ./deployments)
+echo "Configuring to talk to BR $root at prefix $prefix"
+sload moteconfig $prefix $root
+if [ $? -eq 0 ] ; then
+    echo "Successful!"
+else
+    echo "something went wrong"
+fi
