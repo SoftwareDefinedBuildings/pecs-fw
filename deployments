@@ -4,3 +4,4 @@ smc_north 2001:470:4889:103:: 4041
 smc_south 2001:470:4889:102:: 4036
 smc_northeast 2001:470:4889:104:: 400b
 therese_office 2001:470:805f:2:: 4028
+smc_first_room 2001:470:105:: 4034
